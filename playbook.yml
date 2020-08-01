@@ -13,7 +13,7 @@
       when: ('"Untracked" in result') or ('"modified" in result')
     
     - name: Commit changes 
-      shell: chdir=/root/testgit git commit -m "updated repo for {{ tenant }}"
+      shell: chdir=/root/testgit git commit -m "test"
       when: ('"Untracked" in result') or ('"modified" in result')
      
     - name: pull changes

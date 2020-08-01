@@ -23,4 +23,4 @@
       shell: chdir=/root/testgit git pull git@github.com:vinodmv555/testgit.git
   
     - name: pull changes
-      shell: chdir=/root/testgit git push git@github.com:vinodmv555/testgit.git
+      shell: chdir=/root/testgit git push origin develop git@github.com:vinodmv555/testgit.git

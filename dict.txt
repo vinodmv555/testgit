@@ -1,0 +1,28 @@
+ict={}
+
+dict={1:"Baiju", 2:"Sam","name":"java" }
+
+print (dict)
+print (type(dict))
+print (dict[1])
+print(dict.values())
+print (dict.keys())
+p3={}
+p3[1]={1:"Baiju", 2:"Sam","name":"java"}
+p3[2]={3:"Baiju", 4:"Sam","name2222":"pyth"}
+print (p3)
+o/p
+=======
+dict={}
+
+dict={1:"Baiju", 2:"Sam","name":"java" }
+
+print (dict)
+print (type(dict))
+print (dict[1])
+print(dict.values())
+print (dict.keys())
+p3={}
+p3[1]={1:"Baiju", 2:"Sam","name":"java"}
+p3[2]={3:"Baiju", 4:"Sam","name2222":"pyth"}
+print (p3)

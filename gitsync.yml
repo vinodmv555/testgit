@@ -1,3 +1,5 @@
 ---
 -name: Playbook for sync the project to gitlab
-hosts: localhost
+ hosts: localhost
+
+ tasks 

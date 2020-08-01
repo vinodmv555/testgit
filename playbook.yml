@@ -1,0 +1,14 @@
+---
+- name: playbook for pull the repo
+  hosts: localhost
+  vars:
+    tenant: gsxxcc
+  tasks:
+    - name: Addiing files to repo
+      shell: chdir=/root/testgit git add -A
+    
+    - name: Commit changes 
+      shell: chdir=/root/testgit git commit -m "updated repo for {{ tenant }}"
+     
+    - name: pull changes
+      shell: chdir=/root/testgit git pull git@github.com:vinodmv555/testgit.git

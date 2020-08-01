@@ -10,14 +10,14 @@
 
     - name: Addiing files to repo
       shell: chdir=/root/testgit git add -A
-      when: result.stdout.find("modified") !=-1
+      when: result.stdout.find("modified") !=-1 or result.stdout.find("Untracked") !=-1
       register: a
     
     - name: Commit changes 
       shell: chdir=/root/testgit git commit -m test
       #when: ('"Untracked" in result') or ('"modified" in result')
       #when: (a is defined) and (a|length >= 0)
-      when: result.stdout.find("modified") !=-1
+      when: result.stdout.find("modified") !=-1 or result.stdout.find("Untracked") !=-1
      
     - name: pull changes
       shell: chdir=/root/testgit git pull git@github.com:vinodmv555/testgit.git

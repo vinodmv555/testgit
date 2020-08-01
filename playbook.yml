@@ -10,11 +10,11 @@
 
     - name: Addiing files to repo
       shell: chdir=/root/testgit git add -A
-      when: ('"Untracked" in result') or ('"modified" in result')
+      when: result.stdout.find("modified") !=-1
       register: gitaddresult
     
     - name: Commit changes 
-      shell: chdir=/root/testgit git commit -m "test"
+      shell: chdir=/root/testgit git commit -m test
       #when: ('"Untracked" in result') or ('"modified" in result')
       when: gitaddresult is defined
      

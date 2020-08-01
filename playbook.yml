@@ -16,7 +16,7 @@
     - name: Commit changes 
       shell: chdir=/root/testgit git commit -m test
       #when: ('"Untracked" in result') or ('"modified" in result')
-      when: (a is defined) and (a|length > 0)
+      when: (a is defined) and (a|length >= 0)
      
     - name: pull changes
       shell: chdir=/root/testgit git pull git@github.com:vinodmv555/testgit.git

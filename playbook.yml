@@ -14,7 +14,7 @@
       register: a
     
     - name: Commit changes 
-      shell: chdir=/root/testgit git commit -m test
+      shell: chdir=/root/testgit git commit -m {{ tenant }}
       #when: ('"Untracked" in result') or ('"modified" in result')
       #when: (a is defined) and (a|length >= 0)
       when: result.stdout.find("modified") !=-1 or result.stdout.find("Untracked") !=-1 or result.stdout.find("deleted") !=-1
